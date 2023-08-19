@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enquiry Page</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="form.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+  </style>
+  <script>
+
+    function validateForm() {
+      let x = document.forms["myForm"]["fname"].value;
+      let x2=document.forms["myForm"]["femail"].value;
+      let x3=document.forms['myForm']["fcategory"].value;
+      let x4=document.forms['myForm']["fcontact"].value;
+      let x5=document.forms['myForm']["fmessage"].value;
+      let x6=document.forms['myForm']["fcheckbox"].value;
+      if (x == "") {
+        alert("Name must be filled out");
+        return false;
+      }
+     else if(x2=="")
+     {
+      alert("Email must be filled out");
+        return false;
+     }
+     else if(x3=="")
+     {
+      alert("Please select a category to proceed");
+      return false;
+     }
+     else if(x4=="")
+     {
+      alert("Contact details must be filled out");
+      return false;
+     }
+     else if(x5=="")
+     {
+      alert("Please enter the enquiry to proceed");
+      return false;
+     }
+     else if(x6=="")
+     {
+      alert("Agree to the terms and conditions to proceed");
+      return false;
+     }
+     else{
+      alert("Thank you for reaching out to us! \n Your enquiry has been recieved. We'll get back to you shortly");
+      window.location.replace("http://127.0.0.1:5500/index.html");
+     return false;
+     }
+    }
+  </script>
+
+<!-- // window.location.href="http://programminghead.com";  
+}
+//  function myFunction() {
+//     window.location.href="index.html.html";  
+//   -->
+</head>
+<body>
+
+    <div class="full">
+        <!-- <hr> -->
+        <div class="header">
+            <div class="hleft">
+                <!-- <img src="images/menu.png" alt="menu" class="menu"> -->
+                <a href="https://www.iffcotokio.co.in/" target="_blank"><img src="images/IFFCO.logo.png"
+                        alt="iffco logo" class="iffcologo"></a>
+            </div>
+            <!-- <div style="text-align: right;">
+                Call Support: 1800 103 5499
+            </div> -->
+            <br>
+            <div class="hright "> <!-- s10 -->
+                <ul class="navbar">
+                    <li class="header_li"><a href="index.html" class="header_a">Home</a></li>
+                    <li class="header_li"><a href="aboutUs.html" class="header_a">About Us</a></li>
+                    <li class="header_li"><a href="form.html" class="header_a">New policies</a></li>
+                    <li class="header_li"><a href="form.html" class="header_a">Contact Us</a></li>
+                    <li class="header_li"><a href="form.html" class="header_a">Enquiry</a></li>
+                </ul>
+
+            </div>
+        </div>
+
+
+
+        <div>
+            <img src="images/insurance-banner.jpg" alt="familyinsurancephoto" class="insurance-banner">
+        </div>
+
+        <div class="w100" style="padding-left: 60px; padding-right: 60px;">
+            <div class="left-form">
+                <div class="enquiry-left ">
+                    <div class="enquiry-form-for-all">
+                        <form class="container" name="myForm" action="#" onsubmit="return validateForm()" method="post" >
+                          <h1>Enquiry Form</h1>
+                          <div class="form-group">
+                            <label for="name">Your Name:</label>
+                            <input type="text" id="name" name="fname" placeholder="Enter your name">
+                          </div>
+                          <div class="form-group">
+                            <label for="email">Email Address:</label>
+                            <input type="email" id="email" name="femail"  placeholder="Enter your E-mail id">
+                          </div>
+                      
+                          <div class="form-group">
+                            <label for="category">Select Category:</label>
+                            <select id="category" name="fcategory" >
+                              <option value="">Select a category</option>
+                              <option value="category1">Health Insurance</option>
+                              <option value="category2">Home Insurance</option>
+                              <option value="category3">Motor Insurance</option>
+                            </select>
+                      
+                          </div>
+                          <div class="form-group">
+                            <label for="contact">Contact Details:</label>
+                            <input type="text" id="contact" name="fcontact"  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                            placeholder="123-456-7890">
+                          </div>
+                          <div class="form-group">
+                            <label for="message">Message:</label>
+                            <textarea id="message" name="fmessage"  placeholder="Enter the Enquiry"></textarea>
+                          </div>
+                          <div class="form-group">
+                            <label>
+                              <input type="checkbox" name="fcheckbox">
+                              I have read and agree to the <a href="#">terms and conditions.</a>
+                            </label>
+                          </div>
+                          <button type="submit" class="submit-btn" >Submit</button>
+                        </form>
+                      </div>
+
+                </div>
+            </div>
+            
+            <div class="right-form">
+                <div class="contact-right">
+                    <div class="c-contact">
+                        <div class="c-container">
+                          <h1>Contact Details</h1>
+                          <form>
+                            <div class="c-form-group">
+                              <label class="green-title">Contact Number</label>
+                              <div>1800 103 5499</div>
+                            </div>
+                            <br>
+                            <div class="c-form-group">
+                                <label class="green-title">Email Address</label>
+                                <div>Websupport@iffcotokio.co.in</div>
+                            </div>
+                            <br>
+                            <div class="c-form-group">
+                                <label class="green-title">Twitter</label>
+                                <div>twitter.com/IFFCO__TOKIO</div>
+                            </div>
+                            <br>
+                            <div class="c-form-group">
+                                <label class="green-title"> Facebook</label>
+                                <div>facebook.com/iffcotokio/</div>
+                            </div>
+                            <br>
+                            <div class="c-form-group">
+                              <label class="green-title">Linkedin</label>
+                              <div>IFFCO Tokio General Insurance Co. Ltd.</div>
+                            </div>
+                            <!-- <div class="c-form-group">
+                              <label>
+                      
+                              </label>
+                            </div> -->
+                          </form>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div>
+    <ul class="FooterLinks">
+        <li class="list-inline-item"> <a href="https://www.iffcotokio.co.in/about-us/public-disclosure" class="s16">
+                Public Disclosure </a> | </li>
+        <li class="list-inline-item"> <a href="https://www.iffcotokio.co.in/general-insurance/glossary" class="s16">
+                Glossary </a> | </li>
+        <li class="list-inline-item"> <a
+                href="https://www.iffcotokio.co.in/contact-us/register-for-do-not-call" class="s16"> Register for Do Not
+                Call </a> | </li>
+        <li class="list-inline-item"> <a href="https://www.iffcotokio.co.in/contact-us/feedback" class="s16"> Feedback
+            </a> | </li>
+        <li class="list-inline-item"> <a href="https://www.iffcotokio.co.in/about-us/corporate-governance" class="s16">
+                Corporate Governance </a> | </li>
+        <li class="list-inline-item"> <a href="https://www.iffcotokio.co.in/about-us/disclaimer" class="s16"> Disclaimer
+            </a> | </li>
+        <li class="list-inline-item"> <a href="https://www.iffcotokio.co.in/about-us/privacy-policy" class="s16">
+                Privacy Policy </a> | </li>
+        <li class="list-inline-item"> <a href="https://www.iffcotokio.co.in/about-us/terms-use" class="s16"> Terms of
+                Use </a> | </li>
+        <li class="list-inline-item"> <a href="https://www.iffcotokio.co.in/site-map" class="s16"> Sitemap </a> | </li>
+        <li class="list-inline-item"> <a
+                href="https://www.iffcotokio.co.in/about-us/gst-registration-certificate" class="s16"> GST Registration
+                Certificate </a> | </li>
+        <li class="list-inline-item"> <a
+                href="https://www.iffcotokio.co.in/about-us/irdai-important-circulars" class="s16"> IRDAI/Important
+                Circulars </a> | </li>
+        <li class="list-inline-item"> <a
+                href="https://www.iffcotokio.co.in/health-insurance/our-underwriting-philosophy-for-health-insurance-policy" class="s16">
+                Our Underwriting Philosophy for Health Insurance Policy </a> | </li>
+        <li class="list-inline-item"> <a href="/products-withdrawn" class="s16"> Products Withdrawn
+            </a> | </li>
+        <li class="list-inline-item"> <a href="/about-us/e-insurance-account" class="s16"> E-Insurance Account </a> |
+        </li>
+        <li class="list-inline-item"> <a href="/contact-us/customer-services/grievance-redressal" class="s16"> Grievance
+                Redressal </a> </li>
+    </ul>
+</div>
+<hr>
+<div>
+    <footer>Insurance is the subject matter of solicitation. T&C apply. <br>
+        For more details on risk factors, terms and conditions please read sales brochure carefully before
+        concluding a sale. <br>
+        IRDAI registration number: 106, dated 4-12-2000, CIN: U74899DL2000PLC107621 <br>
+        © Copyright 2020 IFFCO-Tokio General Insurance Company Limited</footer>
+</div>
+
+
+
+</div>
+</body>
+
+</body>
+</html>
